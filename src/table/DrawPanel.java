@@ -54,6 +54,7 @@ public class DrawPanel extends JPanel {
 		super.paintComponent(g);
 		// 使用这个工具使得画面的画笔起了作用
 		//画背景颜色
+		//hahahah;
 		setBackground(Color.WHITE);
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setStroke(new BasicStroke(3f));
