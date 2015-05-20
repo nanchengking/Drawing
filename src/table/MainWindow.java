@@ -38,7 +38,7 @@ public class MainWindow extends JFrame {
 		drawPlace = DrawPanel.getDrawPanel();
 
 		toole = Toole.getToole();
-		add(toole, BorderLayout.EAST);
+		add(toole, BorderLayout.WEST);
 		add(drawPlace, BorderLayout.CENTER);
 
 		drawPlace.addMouseListener(new MouseAdapter() {
@@ -71,7 +71,7 @@ public class MainWindow extends JFrame {
 	public static void main(String args[]) {
 
 		frame.iniWindow();
-		frame.setTitle("Õı¿ˆ");
+		frame.setTitle("¡ı ˆ«Â");
 		frame.setVisible(true);
 		
 	  new Thread(new WelcomeWindow()).start();

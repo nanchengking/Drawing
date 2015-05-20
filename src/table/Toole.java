@@ -1,7 +1,9 @@
 package table;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Font;
+import java.awt.Graphics;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,7 +15,7 @@ import javax.swing.JTextField;
 
 public class Toole extends JPanel {
 
- 
+
 	private static JPanel list = new JPanel();
 
 	private static JPanel buttons = new JPanel();
@@ -148,10 +150,8 @@ public class Toole extends JPanel {
 
 	public static void iniWindow() {
 
-		//把三行四列改为三行五列
-		GridLayout listLayout = new GridLayout(4, 4);
-		//把4行2列改为三行五列
-		GridLayout buttonsLayout = new GridLayout(3, 2);
+		GridLayout listLayout = new GridLayout(3, 4);
+		GridLayout buttonsLayout = new GridLayout(4, 2);
 
 		list.setLayout(listLayout);
 		buttons.setLayout(buttonsLayout);
@@ -162,54 +162,31 @@ public class Toole extends JPanel {
 		JLabel y2 = new JLabel("Y2=");
 		JLabel x3 = new JLabel("X3=");
 		JLabel y3 = new JLabel("Y3=");
-		/**
-		 * 下面都是准备删除的
-		 */
-		JLabel rotate_count=new JLabel("角度=");
-		JLabel change_count=new JLabel("倍数=");
 
 		list.add(x1);
 		list.add(x_1);
 		list.add(y1);
 		list.add(y_1);
-		
 		list.add(x2);
 		list.add(x_2);
 		list.add(y2);
 		list.add(y_2);
-		
 		list.add(x3);
 		list.add(x_3);
 		list.add(y3);
 		list.add(y_3);
-		/**
-		 * 新加入的东西，可能要删掉
-		 */
-		list.add(change_count);
-		list.add(scale);
-		list.add(rotate_count);
-		list.add(rotateX);
-		
-		
 		list.setSize(50, 30);
 
 		buttons.add(generate);
 		buttons.add(reset);
-		
 		buttons.add(symmetric_X);
 		buttons.add(symmetric_Y);
-		
-		
-		buttons.add(rotate_X);
-		buttons.add(amplify_big);
 
-		/*buttons.add(rotateX);
-		buttons.add(rotate_X);*/
-          /**
-          * 都是可以把注释剪掉
-          */
-		//buttons.add(scale);
-		//buttons.add(amplify_big);
+		buttons.add(rotateX);
+		buttons.add(rotate_X);
+
+		buttons.add(scale);
+		buttons.add(amplify_big);
 		buttons.setSize(50, 30);
 
 	}

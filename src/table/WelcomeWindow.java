@@ -18,15 +18,15 @@ import javax.swing.JOptionPane;
 public class WelcomeWindow implements Runnable {
 	
 	private JFrame frame;
-	private String fileName="image.gif";
+	private String fileName="image.png";
 	
 	public void run() {
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		int a=screenSize.width/2-250;
 		int b=screenSize.height/2-250;
 		
-	    frame = new JFrame("刘述清XXXXXXXXXXX");
-		frame.setBounds(a, b, 500, 500);
+	    frame = new JFrame("欢迎使用刘述清先生编写的软件");
+		frame.setBounds(a-80, b, 500, 500);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		
 		URL base = this.getClass().getResource(fileName);	
@@ -48,8 +48,7 @@ public class WelcomeWindow implements Runnable {
 		
 		frame.add(lable, BorderLayout.CENTER);
 		frame.pack();
-		//暂时不显示窗口
-		//frame.setVisible(true);
+		frame.setVisible(true);
 		//JOptionPane.showMessageDialog(frame, path+"\n");
 		
 	}
